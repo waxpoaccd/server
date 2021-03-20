@@ -54,7 +54,7 @@ local function send_request(name, args)
 	session = session + 1
 	local str = request(name, args, session)
 	send_package(fd, str)
-	print("Request:", session)
+	print("Request:", session, name)
 end
 
 local last = ""
@@ -93,7 +93,7 @@ local function dispatch_package()
 		if not v then
 			break
 		end
-
+		print("dispatch_package", v)
 		print_package(host:dispatch(v))
 	end
 end
