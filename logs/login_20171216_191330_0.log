@@ -1,0 +1,20 @@
+[2017-12-16 19:13:30.904] [INFO] [login:1] custom logger started.
+[2017-12-16 19:13:30.904] [SKY] [login:4] LAUNCH snlua cdummy
+[2017-12-16 19:13:30.912] [SKY] [login:5] LAUNCH harbor 0 4
+[2017-12-16 19:13:30.914] [SKY] [login:6] LAUNCH snlua datacenterd
+[2017-12-16 19:13:30.917] [SKY] [login:7] LAUNCH snlua service_mgr
+[2017-12-16 19:13:30.922] [SKY] [login:8] LAUNCH snlua main
+[2017-12-16 19:13:30.925] [SKY] [login:9] LAUNCH snlua logind
+[2017-12-16 19:13:30.931] [SKY] [login:a] LAUNCH snlua logind
+[2017-12-16 19:13:30.937] [SKY] [login:b] LAUNCH snlua logind
+[2017-12-16 19:13:30.940] [SKY] [login:c] LAUNCH snlua logind
+[2017-12-16 19:13:30.946] [SKY] [login:d] LAUNCH snlua logind
+[2017-12-16 19:13:30.952] [SKY] [login:e] LAUNCH snlua logind
+[2017-12-16 19:13:30.955] [SKY] [login:f] LAUNCH snlua logind
+[2017-12-16 19:13:30.961] [SKY] [login:10] LAUNCH snlua logind
+[2017-12-16 19:13:30.967] [SKY] [login:11] LAUNCH snlua logind
+[2017-12-16 19:13:30.970] [SKY] [login:9] login server listen at : 127.0.0.1 8001
+[2017-12-16 19:13:30.972] [SKY] [login:12] LAUNCH snlua gated 9
+[2017-12-16 19:13:30.978] [SKY] [login:12] Listen on 0.0.0.0:8888
+[2017-12-16 19:13:30.978] [SKY] [login:2] KILL self
+[2017-12-16 19:13:38.425] [SKY] [login:9] invalid client (fd = 3) error = skynet/lualib/snax/loginserver.lua:119: attempt to call a nil value (global 'dump')
