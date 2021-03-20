@@ -1,7 +1,7 @@
 skynetroot = "skynet/"
 thread = 4
-logger = "log"
-logservice = "snlua"
+logger = nil
+-- logservice = "snlua"
 logpath = "."
 harbor = 0
 start = "main"

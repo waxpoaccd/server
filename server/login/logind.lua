@@ -14,6 +14,7 @@ local user_online = {}
 local user_login = {}
 
 function server.auth_handler(token)
+	LOG_DEBUG("auth_handler token=%s", token)
 	-- the token is base64(user)@base64(server):base64(password)
 	local user, server, password = token:match("([^@]+)@([^:]+):(.+)")
 	user = crypt.base64decode(user)

@@ -77,7 +77,7 @@ local function launch_slave(auth_handler)
 		local etoken = assert_socket("auth", socket.readline(fd),fd)
 
 		local token = crypt.desdecode(secret, crypt.base64decode(etoken))
-
+		print(token)
 		local ok, server, uid =  pcall(auth_handler,token)
 
 		return ok, server, uid, secret
