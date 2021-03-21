@@ -10,7 +10,7 @@ CFLAGS = -g -O2 -Wall
 # for MAC OS X below
 #SHARED := -fPIC -bundle -undefined dynamic_lookup
 
-LUADIR = ../skynet/3rd/lua
+LUADIR = skynet/3rd/lua
 LUA_CLIB_PATH ?= luaclib
 LUA_CLIB = log protobuf
 

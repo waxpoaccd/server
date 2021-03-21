@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -O2 -fPIC -Wall -shared
 MAC_FLAGS = -undefined dynamic_lookup
-LUADIR = ../../../../../skynet/3rd/lua
+LUADIR = ../../../../skynet/3rd/lua
 TARGET = protobuf.so
 
 .PHONY : all linux macosx clean
