@@ -3,7 +3,6 @@ local crypt = require "skynet.crypt"
 local skynet = require "skynet"
 
 local server = {
-	-- host = "127.0.0.1",
 	host = "127.0.0.1",
 	port = 8001,
 	multilogin = false,	-- disallow multilogin
@@ -26,6 +25,7 @@ function server.auth_handler(token)
 end
 
 function server.login_handler(server, uid, secret)
+	LOG_DEBUG(string.format("%s@%s is login, secret is %s", uid, server, crypt.hexencode(secret)))
 	print(string.format("%s@%s is login, secret is %s", uid, server, crypt.hexencode(secret)))
 	local gameserver = assert(server_list[server], "Unknown server")
 	-- only one can login, because disallow multilogin

@@ -117,10 +117,12 @@ local user_login = {}
 
 local function accept(conf, s, fd, addr)
 	dump(conf)
+	dump(s)
 	-- call slave auth
 	local ok, server, uid, secret = skynet.call(s, "lua",  fd, addr)
 	-- slave will accept(start) fd, so we can write to fd later
-
+	dump(server)
+	dump(secret)
 	if not ok then
 		if ok ~= nil then
 			write("response 401", fd, "401 Unauthorized\n")

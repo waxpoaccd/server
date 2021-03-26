@@ -53,10 +53,11 @@ local function unpack_f(f)
 end
 
 local readline = unpack_f(unpack_line)
-
 local challenge = crypt.base64decode(readline())
+print("challenge is ", crypt.base64encode(challenge))
 
 local clientkey = crypt.randomkey()
+print("clientkey is ", crypt.base64encode(crypt.dhexchange(clientkey)))
 writeline(fd, crypt.base64encode(crypt.dhexchange(clientkey)))
 local secret = crypt.dhsecret(crypt.base64decode(readline()), clientkey)
 
@@ -78,19 +79,19 @@ local function encode_token(token)
 		crypt.base64encode(token.pass))
 end
 
-local etoken = crypt.desencode(secret, encode_token(token))
-local b = crypt.base64encode(etoken)
-writeline(fd, crypt.base64encode(etoken))
+-- local etoken = crypt.desencode(secret, encode_token(token))
+-- local b = crypt.base64encode(etoken)
+-- writeline(fd, crypt.base64encode(etoken))
 
-local result = readline()
-print(result)
-local code = tonumber(string.sub(result, 1, 3))
-assert(code == 200)
-socket.close(fd)
+-- local result = readline()
+-- print(result)
+-- local code = tonumber(string.sub(result, 1, 3))
+-- assert(code == 200)
+-- socket.close(fd)
 
-local subid = crypt.base64decode(string.sub(result, 5))
+-- local subid = crypt.base64decode(string.sub(result, 5))
 
-print("login ok, subid=", subid)
+-- print("login ok, subid=", subid)
 
 ----- connect to game server
 
