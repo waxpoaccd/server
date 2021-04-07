@@ -8,7 +8,7 @@ start = "main"
 bootstrap = "snlua bootstrap"	-- The service for bootstrap
 luaservice = skynetroot .. "service/?.lua;" ..
 			"./luaservice/?.lua;"..
-			"./server/login/?.lua"
+			"./server/gate/?.lua"
 
 nodename = "$NODE_NAME"
 
@@ -18,7 +18,7 @@ preload = "./lualib/preload.lua"
 cpath = skynetroot .. "cservice/?.so"
 
 lua_path = skynetroot .. "lualib/?.lua;" ..
-			"./server/login/?.lua;" ..
+			"./server/gate/?.lua;" ..
 			"./lualib/?.lua;" ..
 			"./protocol/?.lua;"..
 			"./config/?.lua;"
